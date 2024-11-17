@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <h2 class="text-center">Applicant Submission</h2>
+    <form (submit)="onSubmit(name.value, email.value, position.value); $event.preventDefault();">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" #name placeholder="Enter applicant name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" #email placeholder="Enter applicant email">
+        </div>
+        <div class="mb-3">
+          <label for="position" class="form-label">Position</label>
+          <input type="text" class="form-control" id="position" #position placeholder="Enter position applied for">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>      
+    <hr>
+    <h3 class="mt-4">Submitted Applicants</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john.doe&#64;example.com</td>
+          <td>Software Engineer</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
